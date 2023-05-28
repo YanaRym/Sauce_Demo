@@ -10,8 +10,6 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-import static constants.PageInfo.SAUCE_DEMO_LOGIN;
-import static constants.PageInfo.SAUCE_DEMO_PASSWORD;
 import static constants.PageUrls.SAUCE_DEMO_PAGE;
 
 public class SauceDemoPage extends BasePage {
@@ -31,14 +29,14 @@ public class SauceDemoPage extends BasePage {
     }
 
 
-    public void inputUsername() {
+    public void inputUsername(String login) {
         WebElement usernameField = driver.findElement(USERNAME_FIELD);
-        usernameField.sendKeys(SAUCE_DEMO_LOGIN);
+        usernameField.sendKeys(login);
     }
 
-    public void inputPassword() {
+    public void inputPassword(String password) {
         WebElement passwordField = driver.findElement(PASSWORD_FIELD);
-        passwordField.sendKeys(SAUCE_DEMO_PASSWORD);
+        passwordField.sendKeys(password);
     }
 
     public void clickLoginButton() {

@@ -10,8 +10,8 @@ public class SauceDemoTest extends BaseTest {
     public void testSauceDemo() {
         SauceDemoPage sauceDemoPage = new SauceDemoPage(driver);
         sauceDemoPage.openSauceDemo();
-        sauceDemoPage.inputUsername();
-        sauceDemoPage.inputPassword();
+        sauceDemoPage.inputUsername(System.getProperty("login"));
+        sauceDemoPage.inputPassword(System.getProperty("password"));
         sauceDemoPage.clickLoginButton();
         sauceDemoPage.goToLinkedIn();
         sauceDemoPage.switchToLinkedInAndWaitForLogo();
